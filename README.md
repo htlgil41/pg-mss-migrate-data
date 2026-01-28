@@ -1,14 +1,14 @@
 ![Logo](https://intus.com.mx/wp-content/uploads/2022/08/Migracion-de-datos-ERP-CRM-Base-de-Datos.png)
 
-# Historia 
+# Historia PG-MSS-MIGRATE-DATA 
 
-En la empresa necesitaban migrar informacion/data a la nube y eran mas de 400K registros, la informacion necesitaba ser obtenida de una bases de datos SQLserver y migrarla a una bases de datos PostgreSQL.
+En la empresa surgió la necesidad de migrar más de 400,000 registros desde SQL Server hacia PostgreSQL en la nube. 
 
-el verdadero reto era hacerlo de la forma mas rapida posible y eficiente tanto para las bases de datos como para la ejecucion de la aplicacion y no tener problemas de rendimiento al leer y escribir datos en un mismo proceso.
+El verdadero reto fue ejecutar el proceso de la forma más rápida y eficiente posible, optimizando tanto el consumo de recursos de las bases de datos como el rendimiento de la aplicación, logrando así una lectura y escritura de datos simultánea sin degradar el sistema.
 
 # Problemas
 
-- Leer los registros que se deseaban migrar de manera eficiente para no saturar la db en cuestion ya que era una db en produccion
+- Tratar de leer los registros que se deseaban migrar de manera eficiente para no saturar la db en cuestion ya que era una db en produccion
 
 - Distribuir la carga o la insercion de registros al estar migrando chucks de datos o completos en la db de destino
 
@@ -39,3 +39,10 @@ Se escribio un programa en Go donde se levanta un worker en un hilo diferente de
 
 
 Nota: En la primer version se realizaron las pruebas y migracion total con exito en un cierto tiempo considerable (Mas de 1minuto) ya que la red era lenta.
+
+
+# Resumen
+
+Esta aplicación ofrece una solución rápida y robusta para la migración de miles o millones de registros entre bases de datos. El código está diseñado para ser altamente adaptable, permitiendo ajustes según la estructura de los datos y los motores involucrados.
+
+Ya sea una migración relacional o una transición de SQL a NoSQL, el sistema proporciona una base sólida para reestructurar la lógica según las necesidades del proyecto. Una herramienta sencilla en su uso, pero potente y eficaz en su ejecución.
